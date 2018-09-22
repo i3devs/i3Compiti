@@ -10,11 +10,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Timers;
 
 namespace I3Compiti
 {
     public partial class CompitoGUI : MaterialForm
     {
+        //Calcola il tempo rimasto
+        System.Timers.Timer timer;
+
+        public Compito Data { get; private set; }
+        public TimeSpan remainingDaysForDelivery { get; set; }
+
         public CompitoGUI(Compito compito)
         {
             InitializeComponent();
@@ -29,7 +36,50 @@ namespace I3Compiti
             materialSingleLineTextFieldDataConsegna.Text = compito.Data.ToString();
             materialSingleLineTextFieldDescription.Text = compito.Descrizione;
             materialSingleLineTextFieldMateria.Text = compito.Materia;
-            materialSingleLineTextFieldTempoRimanente.Text = "TODO";
+
+            Data = compito; 
+            timer = new System.Timers.Timer();
+
+        }
+
+        private void CompitoGUI_Load(object sender, EventArgs e)
+        {
+            SetupTimer(30000);
+            
+            //FIRST TICK 
+            RefreshRemainingTime(timer, null);
+        }
+
+        private void SetupTimer(int intervall)
+        {
+            timer.Interval = intervall;
+            timer.Elapsed += RefreshRemainingTime;
+            timer.AutoReset = true;
+            timer.Enabled = true;
+        }
+
+        private void RefreshRemainingTime(object sender, ElapsedEventArgs e)
+        {
+            DateTime deliverDate = Data.Data;
+            DateTime nowDate = DateTime.Now;
+
+            //(EndDate - StartDate).TotalDays
+            remainingDaysForDelivery = deliverDate - nowDate;
+            //For cross thread operations
+            this.Invoke(new MethodInvoker(delegate { RefreshLabel(); }));
+        }
+
+        private void RefreshLabel()
+        {
+            Console.WriteLine(remainingDaysForDelivery.ToString());
+            String text = String.Format("{0} Days {1} Hours {2} Minutes", remainingDaysForDelivery.Days, remainingDaysForDelivery.Hours, remainingDaysForDelivery.Minutes);
+            materialSingleLineTextFieldTempoRimanente.Text = text;
+        }
+
+        private void CompitoGUI_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //Destroy timer object
+            timer.Dispose();
         }
     }
 }

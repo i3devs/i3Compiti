@@ -13,3 +13,18 @@ C:\Users\luca6\OneDrive\Documenti\Visual Studio 2017\Projects\I3Compiti\I3Compit
 C:\Users\luca6\OneDrive\Documenti\Visual Studio 2017\Projects\I3Compiti\I3Compiti\bin\Debug\Newtonsoft.Json.xml
 C:\Users\luca6\OneDrive\Documenti\Visual Studio 2017\Projects\I3Compiti\I3Compiti\obj\Debug\I3Compiti.GUI.resources
 C:\Users\luca6\OneDrive\Documenti\Visual Studio 2017\Projects\I3Compiti\I3Compiti\obj\Debug\I3Compiti.CompitoGUI.resources
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.csprojAssemblyReference.cache
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.CompitoGUI.resources
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.GUI.resources
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.Properties.Resources.resources
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.csproj.GenerateResource.cache
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.csproj.CoreCompileInputs.cache
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.exe
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.pdb
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\I3Compiti.exe.config
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\I3Compiti.exe
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\I3Compiti.pdb
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\MaterialSkin.dll
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\Newtonsoft.Json.dll
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\Newtonsoft.Json.xml
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.csproj.CopyComplete

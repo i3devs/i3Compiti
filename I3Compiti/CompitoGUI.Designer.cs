@@ -217,6 +217,8 @@
             this.Controls.Add(this.materialLabel1);
             this.Name = "CompitoGUI";
             this.Text = "CompitoGUI";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CompitoGUI_FormClosing);
+            this.Load += new System.EventHandler(this.CompitoGUI_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

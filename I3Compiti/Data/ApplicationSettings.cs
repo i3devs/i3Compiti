@@ -9,6 +9,8 @@ namespace I3Compiti.Data
 {
     public static class ApplicationSettings
     {
+        //TODO FIX RESOURCES
+        /*
         public bool NotifyWindows
         {
             get {
@@ -26,6 +28,6 @@ namespace I3Compiti.Data
             Settings.Default.DelayTimeMinutes = 10;
             Settings.Default.Save();
         }
-
+        */
     }
 }
