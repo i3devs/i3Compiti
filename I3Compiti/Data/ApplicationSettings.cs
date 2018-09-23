@@ -9,25 +9,51 @@ namespace I3Compiti.Data
 {
     public static class ApplicationSettings
     {
-        //TODO FIX RESOURCES
-        /*
-        public bool NotifyWindows
+
+        //NEEDED FIELDS:
+        //Tasks time delay
+        //Notify enabled or not
+        //Notify user x time before
+
+        public static int TasksDelayTime
         {
-            get {
-                return Settings.Default.NotitfyWindows;
-            }
-            set {
-                Settings.Default.DelayTimeMinutes = 10;
+            get { return Settings.Default.DelayTimeMinutes; }
+            set
+            {
+                Settings.Default.DelayTimeMinutes = value;
                 Settings.Default.Save();
             }
-
         }
 
-        public static void YOlo()
+        public static bool NotifyEnabled
         {
-            Settings.Default.DelayTimeMinutes = 10;
-            Settings.Default.Save();
+            get { return Settings.Default.NotifyEnabled; }
+            set
+            {
+                Settings.Default.NotifyEnabled = value;
+                Settings.Default.Save();
+            }
         }
-        */
+
+        public static int NotifyEventMinutesBefore
+        {
+            get { return Settings.Default.DelayTimeMinutes; }
+            set
+            {
+                Settings.Default.DelayTimeMinutes = value;
+                Settings.Default.Save();
+            }
+        }
+
+        public static int NotifyTimeout
+        {
+            get { return Settings.Default.NotifyTimeout; }
+            set
+            {
+                Settings.Default.NotifyTimeout = value;
+                Settings.Default.Save();
+            }
+        }
+
     }
 }
