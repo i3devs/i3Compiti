@@ -37,10 +37,10 @@ namespace I3Compiti.Data
 
         public static int NotifyEventMinutesBefore
         {
-            get { return Settings.Default.DelayTimeMinutes; }
+            get { return Settings.Default.NotifyEventMinutesBefore; }
             set
             {
-                Settings.Default.DelayTimeMinutes = value;
+                Settings.Default.NotifyEventMinutesBefore = value;
                 Settings.Default.Save();
             }
         }
