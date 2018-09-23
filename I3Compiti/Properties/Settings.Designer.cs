@@ -23,21 +23,51 @@ namespace I3Compiti.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("False")]
-        public bool NotitfyWindows {
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool NotifyEnabled {
             get {
-                return ((bool)(this["NotitfyWindows"]));
+                return ((bool)(this["NotifyEnabled"]));
+            }
+            set {
+                this["NotifyEnabled"] = value;
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("10")]
         public int DelayTimeMinutes {
             get {
                 return ((int)(this["DelayTimeMinutes"]));
+            }
+            set {
+                this["DelayTimeMinutes"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("60")]
+        public int NotifyEventMinutesBefore {
+            get {
+                return ((int)(this["NotifyEventMinutesBefore"]));
+            }
+            set {
+                this["NotifyEventMinutesBefore"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("1000")]
+        public int NotifyTimeout {
+            get {
+                return ((int)(this["NotifyTimeout"]));
+            }
+            set {
+                this["NotifyTimeout"] = value;
             }
         }
     }

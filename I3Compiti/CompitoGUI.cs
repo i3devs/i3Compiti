@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Timers;
+using I3Compiti.Helper;
 
 namespace I3Compiti
 {
@@ -63,15 +64,14 @@ namespace I3Compiti
             DateTime deliverDate = Data.Data;
             DateTime nowDate = DateTime.Now;
 
-            //(EndDate - StartDate).TotalDays
-            remainingDaysForDelivery = deliverDate - nowDate;
+            remainingDaysForDelivery = ClientHelper.GetTimeDifference(nowDate,deliverDate);
+
             //For cross thread operations
             this.Invoke(new MethodInvoker(delegate { RefreshLabel(); }));
         }
 
         private void RefreshLabel()
         {
-            Console.WriteLine(remainingDaysForDelivery.ToString());
             String text = String.Format("{0} Days {1} Hours {2} Minutes", remainingDaysForDelivery.Days, remainingDaysForDelivery.Hours, remainingDaysForDelivery.Minutes);
             materialSingleLineTextFieldTempoRimanente.Text = text;
         }
@@ -80,6 +80,12 @@ namespace I3Compiti
         {
             //Destroy timer object
             timer.Dispose();
+        }
+
+        private void linkLabelShowMore_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //SHOW FULL DESCRIPTION
+            MessageBox.Show(Data.Descrizione, this.Text);
         }
     }
 }

@@ -32,6 +32,8 @@ namespace I3Compiti
         {
             compiti = NetHelper.GetCompiti();
 
+            ClientHelper.NotifyEvents(this,compiti.ToArray<Compito>());
+
             //SORT DESCENDING BY DATETIME
             compiti = GUIHelper.SortDescending(compiti);
 
@@ -40,7 +42,9 @@ namespace I3Compiti
                 GUIHelper.AddCompitoToGUI(this, compito);
             }
 
-            GUIHelper.NotifyUser(this,1000, "I3Compiti", "Application Started!", ToolTipIcon.Info);
+            GUIHelper.NotifyUser(this,I3Compiti.Data.ApplicationSettings.NotifyTimeout, "I3Compiti", "Application Started!", ToolTipIcon.Info);
+
+            //START TIMER CHECK!
         }
 
         //Form visualization methods
