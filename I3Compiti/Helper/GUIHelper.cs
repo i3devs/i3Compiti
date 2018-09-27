@@ -1,22 +1,43 @@
 ﻿using I3Compiti.Model;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using I3Compiti.Data;
 
 namespace I3Compiti.Helper
 {
     public static class GUIHelper
     {
-        public static void AddCompitoToGUI(GUI gui, Compito compito)
+        public static void AddCompitoToGUI(Compito compito)
         {
+            GUI gui = ApplicationSettings.Gui;
             if (gui != null)
             {
                 //new[] = get the array type autonomously
                 var row = new ListViewItem(new[] { compito.Autore.ToString(), compito.Materia, compito.Descrizione.ToString(), compito.Data.ToString() });
-                gui.materialListView1.Items.Add(row);
+                gui.listView1.Items.Add(row);
+            }
+            else
+            {
+                throw new NullReferenceException("First you have to start the GUI");
+            }
+        }
+
+        public static void RefreshCompiti()
+        {
+            GUI gui = ApplicationSettings.Gui;
+            if (gui != null)
+            {
+                //CLEAR ALL ROWS
+                gui.listView1.Items.Clear();
+                foreach (Compito compito in NetHelper.GetCompiti().ToArray<Compito>())
+                {
+                    AddCompitoToGUI(compito);
+                }
             }
             else
             {
@@ -35,5 +56,18 @@ namespace I3Compiti.Helper
             return compiti;
         }
 
+        public static void RefreshButtonClicked(GUI gui, double animationDuration)
+        {
+            //START TIME
+            DateTime start = DateTime.Now;
+            gui.pictureBoxRefresh.Image = I3Compiti.Properties.Resources.Reload_Animated;
+            RefreshCompiti();
+            gui.pictureBoxRefresh.Image = I3Compiti.Properties.Resources.Reload;
+
+            //FINISH TIME
+            DateTime finish = DateTime.Now;
+
+            MessageBox.Show(String.Format("The process took {0} milliseconds", ClientHelper.GetTimeDifference(start, finish).TotalMilliseconds), "I3Compiti - Refresh");
+        }   
     }
 }

@@ -10,6 +10,34 @@ namespace I3Compiti.Data
     public static class ApplicationSettings
     {
 
+        //GUI OBJECT
+        private static GUI gui;
+
+        public static GUI Gui
+        {
+            get { return gui; }
+            set
+            {
+                if (value == gui)
+                    return;
+                gui = value;
+            }
+        }
+
+        //SETTINGS OBJECT
+        private static Settings settingsGUI;
+
+        public static Settings SettingsGUI
+        {
+            get { return settingsGUI; }
+            set
+            {
+                if (value == settingsGUI)
+                    return;
+                settingsGUI = value;
+            }
+        }
+
         //NEEDED FIELDS:
         //Tasks time delay
         //Notify enabled or not
@@ -17,43 +45,52 @@ namespace I3Compiti.Data
 
         public static int TasksDelayTime
         {
-            get { return Settings.Default.DelayTimeMinutes; }
+            get { return Properties.Settings.Default.DelayTimeMinutes; }
             set
             {
-                Settings.Default.DelayTimeMinutes = value;
-                Settings.Default.Save();
+                Properties.Settings.Default.DelayTimeMinutes = value;
+                Properties.Settings.Default.Save();
             }
         }
 
         public static bool NotifyEnabled
         {
-            get { return Settings.Default.NotifyEnabled; }
+            get { return Properties.Settings.Default.NotifyEnabled; }
             set
             {
-                Settings.Default.NotifyEnabled = value;
-                Settings.Default.Save();
+                Properties.Settings.Default.NotifyEnabled = value;
+                Properties.Settings.Default.Save();
             }
         }
 
         public static int NotifyEventMinutesBefore
         {
-            get { return Settings.Default.NotifyEventMinutesBefore; }
+            get { return Properties.Settings.Default.NotifyEventMinutesBefore; }
             set
             {
-                Settings.Default.NotifyEventMinutesBefore = value;
-                Settings.Default.Save();
+                Properties.Settings.Default.NotifyEventMinutesBefore = value;
+                Properties.Settings.Default.Save();
             }
         }
 
         public static int NotifyTimeout
         {
-            get { return Settings.Default.NotifyTimeout; }
+            get { return Properties.Settings.Default.NotifyTimeout; }
             set
             {
-                Settings.Default.NotifyTimeout = value;
-                Settings.Default.Save();
+                Properties.Settings.Default.NotifyTimeout = value;
+                Properties.Settings.Default.Save();
             }
         }
 
+        public static bool HideToTray
+        {
+            get { return Properties.Settings.Default.HideToTray; }
+            set
+            {
+                Properties.Settings.Default.HideToTray = value;
+                Properties.Settings.Default.Save();
+            }
+        }
     }
 }

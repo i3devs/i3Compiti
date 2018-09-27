@@ -30,10 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.materialSingleLineTextFieldDescription = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabelShowMore = new System.Windows.Forms.LinkLabel();
             this.materialSingleLineTextFieldTempoRimanente = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldDataConsegna = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.materialSingleLineTextFieldDescription = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldMateria = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialSingleLineTextFieldAuthor = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
@@ -41,7 +42,6 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.linkLabelShowMore = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,26 @@
             this.toolTip1.IsBalloon = true;
             this.toolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             this.toolTip1.ToolTipTitle = "I3Compiti Helper";
+            // 
+            // materialSingleLineTextFieldDescription
+            // 
+            this.materialSingleLineTextFieldDescription.Depth = 0;
+            this.materialSingleLineTextFieldDescription.Enabled = false;
+            this.materialSingleLineTextFieldDescription.Hint = "";
+            this.materialSingleLineTextFieldDescription.Location = new System.Drawing.Point(288, 179);
+            this.materialSingleLineTextFieldDescription.MaxLength = 32767;
+            this.materialSingleLineTextFieldDescription.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialSingleLineTextFieldDescription.Name = "materialSingleLineTextFieldDescription";
+            this.materialSingleLineTextFieldDescription.PasswordChar = '\0';
+            this.materialSingleLineTextFieldDescription.SelectedText = "";
+            this.materialSingleLineTextFieldDescription.SelectionLength = 0;
+            this.materialSingleLineTextFieldDescription.SelectionStart = 0;
+            this.materialSingleLineTextFieldDescription.Size = new System.Drawing.Size(296, 23);
+            this.materialSingleLineTextFieldDescription.TabIndex = 17;
+            this.materialSingleLineTextFieldDescription.TabStop = false;
+            this.materialSingleLineTextFieldDescription.Text = "Desc";
+            this.toolTip1.SetToolTip(this.materialSingleLineTextFieldDescription, "Yolo");
+            this.materialSingleLineTextFieldDescription.UseSystemPasswordChar = false;
             // 
             // panel1
             // 
@@ -65,10 +85,21 @@
             this.panel1.Controls.Add(this.materialLabel2);
             this.panel1.Controls.Add(this.materialLabel1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 61);
+            this.panel1.Location = new System.Drawing.Point(0, 59);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(640, 404);
             this.panel1.TabIndex = 10;
+            // 
+            // linkLabelShowMore
+            // 
+            this.linkLabelShowMore.AutoSize = true;
+            this.linkLabelShowMore.Location = new System.Drawing.Point(529, 205);
+            this.linkLabelShowMore.Name = "linkLabelShowMore";
+            this.linkLabelShowMore.Size = new System.Drawing.Size(64, 13);
+            this.linkLabelShowMore.TabIndex = 20;
+            this.linkLabelShowMore.TabStop = true;
+            this.linkLabelShowMore.Text = "+show more";
+            this.linkLabelShowMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelShowMore_LinkClicked);
             // 
             // materialSingleLineTextFieldTempoRimanente
             // 
@@ -107,26 +138,6 @@
             this.materialSingleLineTextFieldDataConsegna.TabStop = false;
             this.materialSingleLineTextFieldDataConsegna.Text = "Date";
             this.materialSingleLineTextFieldDataConsegna.UseSystemPasswordChar = false;
-            // 
-            // materialSingleLineTextFieldDescription
-            // 
-            this.materialSingleLineTextFieldDescription.Depth = 0;
-            this.materialSingleLineTextFieldDescription.Enabled = false;
-            this.materialSingleLineTextFieldDescription.Hint = "";
-            this.materialSingleLineTextFieldDescription.Location = new System.Drawing.Point(288, 179);
-            this.materialSingleLineTextFieldDescription.MaxLength = 32767;
-            this.materialSingleLineTextFieldDescription.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialSingleLineTextFieldDescription.Name = "materialSingleLineTextFieldDescription";
-            this.materialSingleLineTextFieldDescription.PasswordChar = '\0';
-            this.materialSingleLineTextFieldDescription.SelectedText = "";
-            this.materialSingleLineTextFieldDescription.SelectionLength = 0;
-            this.materialSingleLineTextFieldDescription.SelectionStart = 0;
-            this.materialSingleLineTextFieldDescription.Size = new System.Drawing.Size(296, 23);
-            this.materialSingleLineTextFieldDescription.TabIndex = 17;
-            this.materialSingleLineTextFieldDescription.TabStop = false;
-            this.materialSingleLineTextFieldDescription.Text = "Desc";
-            this.toolTip1.SetToolTip(this.materialSingleLineTextFieldDescription, "Yolo");
-            this.materialSingleLineTextFieldDescription.UseSystemPasswordChar = false;
             // 
             // materialSingleLineTextFieldMateria
             // 
@@ -231,22 +242,11 @@
             this.materialLabel1.TabIndex = 10;
             this.materialLabel1.Text = "Autore";
             // 
-            // linkLabelShowMore
-            // 
-            this.linkLabelShowMore.AutoSize = true;
-            this.linkLabelShowMore.Location = new System.Drawing.Point(529, 205);
-            this.linkLabelShowMore.Name = "linkLabelShowMore";
-            this.linkLabelShowMore.Size = new System.Drawing.Size(64, 13);
-            this.linkLabelShowMore.TabIndex = 20;
-            this.linkLabelShowMore.TabStop = true;
-            this.linkLabelShowMore.Text = "+show more";
-            this.linkLabelShowMore.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelShowMore_LinkClicked);
-            // 
             // CompitoGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 465);
+            this.ClientSize = new System.Drawing.Size(640, 463);
             this.Controls.Add(this.panel1);
             this.Name = "CompitoGUI";
             this.Text = "CompitoGUI";

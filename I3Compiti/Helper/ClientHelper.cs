@@ -20,7 +20,7 @@ namespace I3Compiti.Helper
         {
             foreach (Compito compito in compiti)
             {
-                TimeSpan diff = GetTimeDifference(DateTime.Now,compito.Data);
+                TimeSpan diff = compito.GetRemainingTime();
                 Console.WriteLine(diff.TotalMinutes + " " + ApplicationSettings.NotifyEventMinutesBefore);
 
                 if (diff.TotalMinutes <= ApplicationSettings.NotifyEventMinutesBefore)
@@ -30,5 +30,9 @@ namespace I3Compiti.Helper
             }
         }
 
+        public static bool isProxyException(string message)
+        {
+            return message.Contains("407");
+        }
     }
 }

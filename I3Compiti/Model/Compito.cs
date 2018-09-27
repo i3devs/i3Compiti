@@ -1,4 +1,5 @@
-﻿using System;
+﻿using I3Compiti.Helper;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,11 @@ namespace I3Compiti.Model
             Materia = materia;
             Descrizione = descrizione;
             Data = data;
+        }
+
+        public TimeSpan GetRemainingTime()
+        {
+            return ClientHelper.GetTimeDifference(DateTime.Now, Data);
         }
 
         public override string ToString()

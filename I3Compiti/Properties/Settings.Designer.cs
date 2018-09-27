@@ -70,5 +70,17 @@ namespace I3Compiti.Properties {
                 this["NotifyTimeout"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool HideToTray {
+            get {
+                return ((bool)(this["HideToTray"]));
+            }
+            set {
+                this["HideToTray"] = value;
+            }
+        }
     }
 }

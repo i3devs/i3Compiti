@@ -28,3 +28,4 @@ C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\MaterialSki
 C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\Newtonsoft.Json.dll
 C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\bin\Debug\Newtonsoft.Json.xml
 C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.csproj.CopyComplete
+C:\Users\luca6\OneDrive\Documenti\Repo\i3Compiti\I3Compiti\obj\Debug\I3Compiti.Settings.resources

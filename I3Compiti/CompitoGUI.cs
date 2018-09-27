@@ -40,7 +40,6 @@ namespace I3Compiti
 
             Data = compito; 
             timer = new System.Timers.Timer();
-
         }
 
         private void CompitoGUI_Load(object sender, EventArgs e)
@@ -64,7 +63,7 @@ namespace I3Compiti
             DateTime deliverDate = Data.Data;
             DateTime nowDate = DateTime.Now;
 
-            remainingDaysForDelivery = ClientHelper.GetTimeDifference(nowDate,deliverDate);
+            remainingDaysForDelivery = Data.GetRemainingTime();
 
             //For cross thread operations
             this.Invoke(new MethodInvoker(delegate { RefreshLabel(); }));
