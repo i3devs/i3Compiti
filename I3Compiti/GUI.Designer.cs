@@ -58,6 +58,8 @@
             // 
             // materialTabSelector1
             // 
+            this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Location = new System.Drawing.Point(0, 64);
@@ -92,12 +94,15 @@
             // 
             // listView1
             // 
+            this.listView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView1.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.listView1.FullRowSelect = true;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.MultiSelect = false;
@@ -106,25 +111,26 @@
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "Data";
-            this.columnHeader1.Width = 99;
+            this.columnHeader1.Text = "AUTORE";
+            this.columnHeader1.Width = 230;
             // 
             // columnHeader2
             // 
-            this.columnHeader2.Text = "Materia";
+            this.columnHeader2.Text = "MATERIA";
             this.columnHeader2.Width = 187;
             // 
             // columnHeader3
             // 
-            this.columnHeader3.Text = "Descrizione";
+            this.columnHeader3.Text = "DESCRIZIONE";
             this.columnHeader3.Width = 249;
             // 
             // columnHeader4
             // 
-            this.columnHeader4.Text = "Data Consegna";
+            this.columnHeader4.Text = "DATA CONSEGNA";
             this.columnHeader4.Width = 198;
             // 
             // tabPage2
@@ -167,12 +173,12 @@
             this.materialLabelBuild.BackColor = System.Drawing.Color.Transparent;
             this.materialLabelBuild.Cursor = System.Windows.Forms.Cursors.Default;
             this.materialLabelBuild.Depth = 0;
-            this.materialLabelBuild.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabelBuild.Font = new System.Drawing.Font("Roboto Mono", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.materialLabelBuild.ForeColor = System.Drawing.Color.Red;
-            this.materialLabelBuild.Location = new System.Drawing.Point(77, 42);
+            this.materialLabelBuild.Location = new System.Drawing.Point(63, 42);
             this.materialLabelBuild.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabelBuild.Name = "materialLabelBuild";
-            this.materialLabelBuild.Size = new System.Drawing.Size(57, 19);
+            this.materialLabelBuild.Size = new System.Drawing.Size(77, 28);
             this.materialLabelBuild.TabIndex = 7;
             this.materialLabelBuild.Text = "ALPHA";
             // 

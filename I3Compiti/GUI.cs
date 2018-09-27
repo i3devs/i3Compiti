@@ -76,19 +76,6 @@ namespace I3Compiti
             lv.Columns[lv.Columns.Count - 1].Width = -2;
         }
 
-        private void materialListView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
-        {
-            if (listView1.SelectedIndices.Count > 0)
-            {
-                int index = listView1.SelectedIndices[0];
-                CompitoGUI gui = new CompitoGUI(compiti[index]);
-                gui.Text = "Compito n." + index + 1;
-                gui.TopMost = true;
-                gui.Show();
-            }
-           
-        }
-
         private void pictureBoxRefresh_Click(object sender, EventArgs e)
         {
             //REFRESH
@@ -105,6 +92,18 @@ namespace I3Compiti
             else
             {
                 ApplicationSettings.SettingsGUI.TopMost = true;
+            }
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listView1.SelectedIndices.Count > 0)
+            {
+                int index = listView1.SelectedIndices[0];
+                CompitoGUI gui = new CompitoGUI(compiti[index]);
+                gui.Text = "Compito n." + index + 1;
+                gui.TopMost = true;
+                gui.Show();
             }
         }
     }
